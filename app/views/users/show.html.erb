@@ -3,10 +3,25 @@
     <div class="col-xs-6 user-average-score">
       <p class="p-average">AVERAGE SCORE</p>
     </div>
+      <p class="average-score"><%= @user_record.all.sum(:score) %></p>
     <div class="col-xs-6 user-average-score">
       <p class="p-average">AVERAGE PUTT</p>
-      <p class="average-putt"></p>
+      <p class="average-putt"><%= @user_record.all.sum(:putt) %></p>
     </div>
-    
+  </div>
+  <div class="row">
+    <div class="new-record">
+      <%= form_with model:@record, method: :post do |f| %>
+        <div class="form_group user-score">
+          <%= f.label :スコア %>
+          <%= f.number_field :score, value: 0, min: 1 %><br>
+        </div>
+        <div class="form_group user-rival-score">
+          <%= f.label :パット %>
+          <%= f.number_field :putt, value: 0, min: 1 %>
+        </div>
+        <%= f.submit "記録を追加する", class: "btn btn-primary user-record-create" %>
+      <% end %>
+    </div>
   </div>
 </div>
