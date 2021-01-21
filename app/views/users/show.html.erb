@@ -11,17 +11,37 @@
   </div>
   <div class="row">
     <div class="new-record">
-      <%= form_with model:@record, method: :post do |f| %>
-        <div class="form_group user-score">
-          <%= f.label :スコア %>
-          <%= f.number_field :score, value: 0, min: 1 %><br>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        スコアの追加
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">スコアの追加</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <%= form_with model:@record, method: :post do |f| %>
+              <div class="modal-body">
+                <div class="form_group user-score">
+                  <%= f.label :スコア %>
+                  <%= f.number_field :score, value: 0, min: 1 %><br>
+                </div>
+                <div class="form_group user-rival-score">
+                  <%= f.label :パット %>
+                  <%= f.number_field :putt, value: 0, min: 1 %>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                <%= f.submit "記録を追加する", class: "btn btn-primary user-record-create" %>
+              </div>
+            <% end %>
+          </div>
         </div>
-        <div class="form_group user-rival-score">
-          <%= f.label :パット %>
-          <%= f.number_field :putt, value: 0, min: 1 %>
-        </div>
-        <%= f.submit "記録を追加する", class: "btn btn-primary user-record-create" %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
