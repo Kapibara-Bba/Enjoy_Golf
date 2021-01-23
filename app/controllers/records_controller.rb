@@ -14,6 +14,6 @@ class RecordsController < ApplicationController
 
   private
   def record_params
-    params.require(:record).permit(:score, :putt)
+    params.require(:record).permit(:score, :putt, :days)
   end
 end
