@@ -1,12 +1,16 @@
 <div class="container">
+  <div class="user-show">
+    <%= @user.name %>
+    <%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %>
+  </div>
   <div class="row">
     <div class="col-xs-6 user-average-score">
       <p class="p-average">AVERAGE SCORE</p>
     </div>
-      <p class="average-score"><%= @user_record.average(:score) %></p>
+      <p class="average-score"><%= @user_record.average(:score).floor(1) %></p>
     <div class="col-xs-6 user-average-score">
       <p class="p-average">AVERAGE PUTT</p>
-      <p class="average-putt"><%= @user_record.average(:putt) %></p>
+      <p class="average-putt"><%= @user_record.average(:putt).floor(1) %></p>
     </div>
   </div>
   <%= column_chart @user_record.group(:days).sum(:score), class: 'score-chart' %>
