@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="">
+    <div class="record-show">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>日付</th>
+            <th>コース</th>
+            <th>スコア</th>
+            <th>パット</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="score-show">
+            <td><%= @record.days %></td>
+            <td><%= @record.course %></td>
+            <td><%= @record.score %></td>
+            <td><%= @record.putt %></td>
+          </tr>
+        </tbody>
+      </table>
+      <%= link_to "削除する", record_path(@record), method: :delete, "data-confirm" => "本当に削除しますか？", class: 'btn btn-danger' %>
+    </div>
+  </div>
+</div>

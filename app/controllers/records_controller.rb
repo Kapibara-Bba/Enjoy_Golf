@@ -1,5 +1,13 @@
 class RecordsController < ApplicationController
 
+  def new
+    @record = Record.new(record_params)
+  end
+
+  def show
+    @record = Record.find(params[:id])
+  end
+
   def create
     @record = Record.new(record_params)
     @record.user_id = current_user.id
@@ -12,8 +20,14 @@ class RecordsController < ApplicationController
     end
   end
 
+  def destroy
+    @record = Record.find(params[:id])
+    @record.destroy
+    redirect_to user_path(current_user)
+  end
+
   private
   def record_params
-    params.require(:record).permit(:score, :putt, :days)
+    params.require(:record).permit(:score, :putt, :days, :member, :course)
   end
 end
