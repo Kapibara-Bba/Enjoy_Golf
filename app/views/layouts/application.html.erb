@@ -17,13 +17,20 @@
           <div class="logo"></div>
         <% end %>
         <nav>
-          <ul>
-            <li class="top-header"><%= link_to 'トップページ', root_path %></li>
-            <li class="top-header"><%= link_to 'Enjoy_Golfとは？', homes_about_path %></li>
-            <li class="top-header"><%= link_to 'ログイン', new_user_session_path %></li>
-            <li class="top-header"><%= link_to '新規登録', new_user_registration_path %></li>
-            <li class="top-header"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-          </ul>
+          <% if user_signed_in? %>
+            <ul>
+              <li class="top-header"><%= link_to 'トップページ', root_path %></li>
+              <li class="top-header"><%= link_to 'Enjoy_Golfとは？', homes_about_path %></li>
+              <li class="top-header"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            </ul>
+          <% else %>
+            <ul>
+              <li class="top-header"><%= link_to 'トップページ', root_path %></li>
+              <li class="top-header"><%= link_to 'Enjoy_Golfとは？', homes_about_path %></li>
+              <li class="top-header"><%= link_to 'ログイン', new_user_session_path %></li>
+              <li class="top-header"><%= link_to '新規登録', new_user_registration_path %></li>
+            </ul>
+          <% end %>
         </nav>
       </header>
       <p class="notice"><%= notice %></p>
