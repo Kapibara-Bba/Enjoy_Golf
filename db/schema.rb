@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_042303) do
     t.integer "hole17_putt"
     t.integer "hole18_putt"
     t.string "memo"
+    t.string "prefecture_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"

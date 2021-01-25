@@ -75,3 +75,5 @@ gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
 
 gem 'chartkick'
+
+gem 'jp_prefecture'

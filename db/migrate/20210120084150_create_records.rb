@@ -45,6 +45,7 @@ class CreateRecords < ActiveRecord::Migration[5.2]
       t.integer :hole17_putt
       t.integer :hole18_putt
       t.string :memo
+      t.string :prefecture_code
       t.timestamps
     end
   end
