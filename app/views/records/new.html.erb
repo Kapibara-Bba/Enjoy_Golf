@@ -2,17 +2,40 @@
   <div class="score-container">
     <%= form_with model:@record, method: :post do |f| %>
       <div class="record-form">
-        <div class="form_group">
-          <%= f.label :ラウンド日 %>
-          <%= f.date_field :days %>
+        <div class="course-info">
+          <div class="course-text">
+            <i class="fas fa-flag"></i>
+            <p>ゴルフ場情報</p>
+          </div>
+          <div class="form_group">
+            <%= f.label :ゴルフ場 %>
+            <%= f.text_area :course, rows:1 %>
+          </div>
+          <div class="form_group">
+            <%= f.label :都道府県 %>
+            <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name %>
+          </div>
         </div>
-        <div class="form_group">
-          <%= f.label :ゴルフ場 %>
-          <%= f.text_area :course, :rows:1 %>
-        </div>
-        <div class="form_group">
-          <%= f.label :天気 %>
-          <%= f.select :weather, Record.weathers.keys, {} %>
+        <div class="play-info">
+          <div class="play-text">
+            <i class="fas fa-golf-ball"></i>
+            <p>プレー情報</p>
+          </div>
+          <div class="form_group">
+            <%= f.label :ラウンド日 %>
+            <%= f.date_field :days %>
+          </div>
+          <div class="form_group">
+            <%= f.label :天気 %>
+            <%= f.select :weather, Record.weathers.keys, {} %>
+          </div>
+          <div class="form_group">
+            <%= f.label :風 %>
+            <%= f.select :wind, Record.winds.keys, {} %>
+          </div>
+          <div class="score-actions">
+            <%= f.submit "登録する", class: "btn btn-info" %>
+          </div>
         </div>
       </div>
     <% end %>

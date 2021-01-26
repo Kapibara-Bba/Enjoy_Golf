@@ -28,6 +28,10 @@ class RecordsController < ApplicationController
 
   private
   def record_params
-    params.require(:record).permit(:score, :putt, :days, :member, :course)
+    params.permit(:score, :putt, :days, :member, :course, :hole1, :hole2, :hole3, :hole4, :hole5, :hole6, :hole7,
+                  :hole8, :hole9, :hole10, :hole11, :hole12, :hole13, :hole14, :hole15, :hole16, :hole17, :hole18, :hole1_putt,
+                  :hole2_putt, :hole3_putt, :hole4_putt, :hole5_putt, :hole6_putt, :hole7_putt, :hole8_putt, :hole9_putt, :hole10_putt,
+                  :hole11_putt, :hole12_putt, :hole13_putt, :hole14_putt, :hole15_putt, :hole16_putt, :hole17_putt, :hole18_putt,
+                  :memo, :prefecture_code)
   end
 end

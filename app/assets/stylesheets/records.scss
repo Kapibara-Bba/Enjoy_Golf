@@ -6,3 +6,11 @@ td {
   height: 100px;
   vertical-align: middle;
 }
+
+.course-text, .play-text {
+  display: flex;
+}
+
+.course-info, .play-info {
+  font-size: 20px;
+}
