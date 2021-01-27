@@ -33,11 +33,73 @@
             <%= f.label :風 %>
             <%= f.select :wind, Record.winds.keys, {} %>
           </div>
+        </div>
+      </div>
+      <div class="score-form">
+        <div class="score-info">
+          <%= f.label :１ホール %>
+          <%= f.number_field :hole1 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt1 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :２ホール %>
+          <%= f.number_field :hole2 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt2 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :３ホール %>
+          <%= f.number_field :hole3 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt3 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :４ホール %>
+          <%= f.number_field :hole4 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt4 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :５ホール %>
+          <%= f.number_field :hole5 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt5 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :６ホール %>
+          <%= f.number_field :hole6 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt6 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :７ホール %>
+          <%= f.number_field :hole7 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt7 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :８ホール %>
+          <%= f.number_field :hole8 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt8 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :９ホール %>
+          <%= f.number_field :hole9 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt9 %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１０ホール %>
+          <%= f.number_field :hole10 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt %>
+        </div>
+      </div>
           <div class="score-actions">
             <%= f.submit "登録する", class: "btn btn-info" %>
           </div>
-        </div>
-      </div>
     <% end %>
   </div>
 </div>
