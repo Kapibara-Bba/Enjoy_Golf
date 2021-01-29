@@ -7,10 +7,18 @@ td {
   vertical-align: middle;
 }
 
+.score {
+  display: flex;
+}
+
 .course-text, .play-text {
   display: flex;
 }
 
 .course-info, .play-info {
   font-size: 20px;
+}
+
+.score-form input {
+  width: 70px;
 }

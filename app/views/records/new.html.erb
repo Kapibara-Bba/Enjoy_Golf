@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="score-container">
-    <%= form_with model:@record, method: :post do |f| %>
+  <%= form_with model:@record, method: :post do |f| %>
+    <div class="score">
       <div class="record-form">
         <div class="course-info">
           <div class="course-text">
@@ -144,10 +144,16 @@
           <%= f.label :パット %>
           <%= f.number_field :hole18_putt %>
         </div>
-      </div>
-          <div class="score-actions">
-            <%= f.submit "登録する", class: "btn btn-info" %>
+        <div class="memo-form">
+          <div class="memo-info">
+            <%= f.label :ラウンドメモ %>
+            <%= f.text_area :memo %>
           </div>
-    <% end %>
-  </div>
+        </div>
+      </div>
+    </div>
+    <div class="score-actions">
+      <%= f.submit "登録する", class: "btn btn-info" %>
+    </div>
+  <% end %>
 </div>
