@@ -1,0 +1,159 @@
+<div class="container">
+  <%= form_with model:@record, method: :post do |f| %>
+    <div class="score">
+      <div class="record-form">
+        <div class="course-info">
+          <div class="course-text">
+            <i class="fas fa-flag"></i>
+            <p>ゴルフ場情報</p>
+          </div>
+          <div class="form_group">
+            <%= f.label :ゴルフ場 %>
+            <%= f.text_area :course, rows:1 %>
+          </div>
+          <div class="form_group">
+            <%= f.label :都道府県 %>
+            <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name %>
+          </div>
+        </div>
+        <div class="play-info">
+          <div class="play-text">
+            <i class="fas fa-golf-ball"></i>
+            <p>プレー情報</p>
+          </div>
+          <div class="form_group">
+            <%= f.label :ラウンド日 %>
+            <%= f.date_field :days %>
+          </div>
+          <div class="form_group">
+            <%= f.label :天気 %>
+            <%= f.select :weather, Record.weathers.keys, {} %>
+          </div>
+          <div class="form_group">
+            <%= f.label :風 %>
+            <%= f.select :wind, Record.winds.keys, {} %>
+          </div>
+        </div>
+      </div>
+      <div class="score-form">
+        <div class="score-info">
+          <%= f.label :１ホール %>
+          <%= f.number_field :hole1 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole1_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :２ホール %>
+          <%= f.number_field :hole2 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole2_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :３ホール %>
+          <%= f.number_field :hole3 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole3_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :４ホール %>
+          <%= f.number_field :hole4 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole4_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :５ホール %>
+          <%= f.number_field :hole5 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole5_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :６ホール %>
+          <%= f.number_field :hole6 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole6_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :７ホール %>
+          <%= f.number_field :hole7 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole7_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :８ホール %>
+          <%= f.number_field :hole8 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole8_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :９ホール %>
+          <%= f.number_field :hole9 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole9_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１０ホール %>
+          <%= f.number_field :hole10 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole10_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１１ホール %>
+          <%= f.number_field :hole11 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole11_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１２ホール %>
+          <%= f.number_field :hole12 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole12_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１３ホール %>
+          <%= f.number_field :hole13 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole13_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１４ホール %>
+          <%= f.number_field :hole14 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole14_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１５ホール %>
+          <%= f.number_field :hole15 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole15_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１６ホール %>
+          <%= f.number_field :hole16 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole16_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１７ホール %>
+          <%= f.number_field :hole17 %>
+          <%= f.label :パット %>
+          <%= f.number_field :hole17_putt %>
+        </div>
+        <div class="score-info">
+          <%= f.label :１８ホール %>
+          <%= f.number_field :hole18%>
+          <%= f.label :パット %>
+          <%= f.number_field :hole18_putt %>
+        </div>
+        <div class="memo-form">
+          <div class="memo-info">
+            <%= f.label :ラウンドメモ %>
+            <%= f.text_area :memo %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="score-actions">
+      <%= f.submit "変更を保存する", class: "btn btn-info" %>
+    </div>
+  <% end %>
+</div>
