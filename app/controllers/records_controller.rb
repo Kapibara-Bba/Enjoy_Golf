@@ -7,6 +7,10 @@ class RecordsController < ApplicationController
   def show
     @record = Record.find(params[:id])
   end
+  
+  def edit
+    @record = Record.find(params[:id])
+  end
 
   def create
     @record = Record.new(record_params)
@@ -19,6 +23,8 @@ class RecordsController < ApplicationController
       render 'users#show'
     end
   end
+  
+  
 
   def destroy
     @record = Record.find(params[:id])
