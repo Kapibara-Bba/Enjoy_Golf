@@ -24,7 +24,17 @@ class RecordsController < ApplicationController
     end
   end
   
-  
+  def update
+    @record = Record.find(params[:id])
+    @record.user_id = current_user.id
+    @user_record = current_user.records
+    if @record.save
+      redirect_to user_path(current_user)
+      flash[:notice] = "記録の変更に成功しました"
+    else
+      render 'edit'
+    end
+  end
 
   def destroy
     @record = Record.find(params[:id])
