@@ -1,5 +1,8 @@
 <div class="container">
-  <%= form_with model:@record, method: :post do |f| %>
+  <div class="record-edit">
+    <h3 class="record-edit-title">スコア編集</h3>
+  </div>
+  <%= form_with model:@record, method: :patch do |f| %>
     <div class="score">
       <div class="record-form">
         <div class="course-info">
