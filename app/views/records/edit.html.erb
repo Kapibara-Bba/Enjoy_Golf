@@ -16,7 +16,7 @@
           </div>
           <div class="form_group">
             <%= f.label :都道府県 %>
-            <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all %>
+            <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name %>
           </div>
         </div>
         <div class="play-info">
