@@ -20,5 +20,13 @@ td {
 }
 
 .score-form input {
-  width: 70px;
+  width: 65px;
+}
+
+.score-form {
+  display: flex;
+}
+
+.memo-info textarea {
+  width: 50%;
 }
