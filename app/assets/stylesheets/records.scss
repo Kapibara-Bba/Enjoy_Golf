@@ -25,8 +25,26 @@ td {
 
 .score-form {
   display: flex;
+  margin-left: 10%;
+  width: 108%;
+}
+
+.latter-half {
+  margin-left: 10%;
+}
+
+.memo-info {
+  display: flex;
+  justify-content: center;
+  margin: auto 20px;
 }
 
 .memo-info textarea {
-  width: 50%;
+  width: 60%;
+  height: 140px;
 }
+
+.memo-info label {
+  margin: auto 20px;
+}
+
