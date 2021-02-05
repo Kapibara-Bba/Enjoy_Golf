@@ -7,7 +7,7 @@ class RecordsController < ApplicationController
   def show
     @record = Record.find(params[:id])
   end
-  
+
   def edit
     @record = Record.find(params[:id])
   end
@@ -23,7 +23,7 @@ class RecordsController < ApplicationController
       render 'users#show'
     end
   end
-  
+
   def update
     @record = Record.find(params[:id])
     @record.user_id = current_user.id
