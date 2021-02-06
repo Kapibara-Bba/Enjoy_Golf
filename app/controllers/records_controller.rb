@@ -2,6 +2,7 @@ class RecordsController < ApplicationController
 
   def new
     @record = Record.new(record_params)
+    @sum_scor
   end
 
   def show
