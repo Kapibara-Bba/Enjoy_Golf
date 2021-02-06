@@ -9,14 +9,14 @@
     </div>
       <p class="average-score">
         <% if @user_record.present? %>
-          <%= @user_record.average(:score).floor(1) %>
+          <%#= @user_record.average(:score).floor(1) %>
         <% end %>
       </p>
     <div class="col-xs-6 user-average-score">
       <p class="p-average">AVERAGE PUTT</p>
       <p class="average-putt">
         <% if @user_record.present? %>
-          <%= @user_record.average(:putt) %>
+          <%#= @user_record.average(:putt) %>
         <% end %>
       </p>
     </div>
