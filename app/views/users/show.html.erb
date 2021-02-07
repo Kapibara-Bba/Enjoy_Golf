@@ -38,7 +38,10 @@
         <tr>
           <td><%= record.days %></td>
           <td><%= record.course %></td>
-          <td><%= record.score %></td>
+          <!--<td><%#= record.score %></td>-->
+          <td><%= record.hole1 + record.hole2 + record.hole3 + record.hole4 + record.hole5 + record.hole6 + record.hole7 +
+                    record.hole8 + record.hole9 + record.hole10 + record.hole11 + record.hole12 + record.hole13 + record.hole14 +
+                    record.hole15 + record.hole16 + record.hole17 + record.hole18 %></td>
           <td><%= record.member %></td>
           <td>
             <% if record.user_id == current_user.id %>
