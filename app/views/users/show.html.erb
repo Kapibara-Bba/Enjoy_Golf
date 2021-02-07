@@ -9,14 +9,24 @@
     </div>
       <p class="average-score">
         <% if @user_record.present? %>
-          <%#= @user_record.average(:score).floor(1) %>
+          <%= sum_score = @user_record.all.sum(:hole1) + @user_record.all.sum(:hole2) + @user_record.all.sum(:hole3) + @user_record.all.sum(:hole4) +
+            @user_record.all.sum(:hole5) + @user_record.all.sum(:hole6) + @user_record.all.sum(:hole7) + @user_record.all.sum(:hole8) +
+            @user_record.all.sum(:hole9) + @user_record.all.sum(:hole10) + @user_record.all.sum(:hole11) + @user_record.all.sum(:hole12) +
+            @user_record.all.sum(:hole13) + @user_record.all.sum(:hole14) + @user_record.all.sum(:hole15) + @user_record.all.sum(:hole16) ;
+            @user_record.all.sum(:hole17) + @user_record.all.sum(:hole18) %>
+          <%#= @user_record.average().floor(1) %>
         <% end %>
       </p>
     <div class="col-xs-6 user-average-score">
       <p class="p-average">AVERAGE PUTT</p>
       <p class="average-putt">
         <% if @user_record.present? %>
-          <%#= @user_record.average(:putt) %>
+          <%= sum_putt = @user_record.all.sum(:hole1_putt) + @user_record.all.sum(:hole2_putt) + @user_record.all.sum(:hole3_putt) +
+            @user_record.all.sum(:hole4_putt) + @user_record.all.sum(:hole5_putt) + @user_record.all.sum(:hole6_putt) + @user_record.all.sum(:hole7_putt) +
+            @user_record.all.sum(:hole8_putt) + @user_record.all.sum(:hole9_putt) + @user_record.all.sum(:hole10_putt) + @user_record.all.sum(:hole11_putt) +
+            @user_record.all.sum(:hole12_putt) + @user_record.all.sum(:hole13_putt) + @user_record.all.sum(:hole14_putt) +
+            @user_record.all.sum(:hole15_putt) + @user_record.all.sum(:hole16_putt) + @user_record.all.sum(:hole17_putt) + @user_record.all.sum(:hole18_putt) %>
+          <%#= @user_record.average(:sum_putt) %>
         <% end %>
       </p>
     </div>
@@ -38,10 +48,9 @@
         <tr>
           <td><%= record.days %></td>
           <td><%= record.course %></td>
-          <!--<td><%#= record.score %></td>-->
-          <td><%= record.hole1 + record.hole2 + record.hole3 + record.hole4 + record.hole5 + record.hole6 + record.hole7 +
-                    record.hole8 + record.hole9 + record.hole10 + record.hole11 + record.hole12 + record.hole13 + record.hole14 +
-                    record.hole15 + record.hole16 + record.hole17 + record.hole18 %></td>
+          <td><%= record.score = record.hole1 + record.hole2 + record.hole3 + record.hole4 + record.hole5 + record.hole6 + record.hole7 +
+                  record.hole8 + record.hole9 + record.hole10 + record.hole11 + record.hole12 + record.hole13 + record.hole14 +
+                  record.hole15 + record.hole16 + record.hole17 + record.hole18 %></td>
           <td><%= record.member %></td>
           <td>
             <% if record.user_id == current_user.id %>
