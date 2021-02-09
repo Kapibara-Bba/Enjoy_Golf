@@ -25,6 +25,7 @@
         </tbody>
       </table>
       <%= link_to "削除する", record_path(@record), method: :delete, "data-confirm" => "本当に削除しますか？", class: 'btn btn-danger' %>
+      <%= link_to "編集する", edit_record_path(@record), class: 'btn btn-success' %>
     </div>
   </div>
 </div>
