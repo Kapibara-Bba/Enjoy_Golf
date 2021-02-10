@@ -1,3 +1,22 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-main {
+  text-align: center;
+}
+
+.top-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.login-button {
+  margin: 5%;
+}
+
+.sign-up-button {
+  margin: 5%;
+}
+
