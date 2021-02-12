@@ -14,16 +14,21 @@
           <tr class="score-show">
             <td><%= @record.days %></td>
             <td><%= @record.course %></td>
-            <td><%= @record.hole1 + @record.hole2 + @record.hole3 + @record.hole4 + @record.hole5 + @record.hole6 + @record.hole7 +
-                    @record.hole8 + @record.hole9 + @record.hole10 + @record.hole11 + @record.hole12 + @record.hole13 + @record.hole14 +
-                    @record.hole15 + @record.hole16 + @record.hole17 + @record.hole18 %></td>
-            <td><%= @record.hole1_putt + @record.hole2_putt + @record.hole3_putt + @record.hole4_putt + @record.hole5_putt +
-                    @record.hole6_putt + @record.hole7_putt + @record.hole8_putt + @record.hole9_putt + @record.hole10_putt +
-                    @record.hole11_putt + @record.hole12_putt + @record.hole13_putt + @record.hole14_putt + @record.hole15_putt +
-                    @record.hole16_putt + @record.hole17_putt + @record.hole18_putt %></td>
+            <td>
+              <%= @record.hole1 + @record.hole2 + @record.hole3 + @record.hole4 + @record.hole5 + @record.hole6 + @record.hole7 +
+                  @record.hole8 + @record.hole9 + @record.hole10 + @record.hole11 + @record.hole12 + @record.hole13 + @record.hole14 +
+                  @record.hole15 + @record.hole16 + @record.hole17 + @record.hole18 %>
+            </td>
+            <td>
+              <%= @record.hole1_putt + @record.hole2_putt + @record.hole3_putt + @record.hole4_putt + @record.hole5_putt +
+                  @record.hole6_putt + @record.hole7_putt + @record.hole8_putt + @record.hole9_putt + @record.hole10_putt +
+                  @record.hole11_putt + @record.hole12_putt + @record.hole13_putt + @record.hole14_putt + @record.hole15_putt +
+                  @record.hole16_putt + @record.hole17_putt + @record.hole18_putt %>
+            </td>
           </tr>
         </tbody>
       </table>
+      <p class="record-show-first">前半ホール</p>
       <table class="hole-show table table-hover table-inverse">
         <thead>
           <tr>
@@ -52,11 +57,52 @@
             <td><%= @record.hole7 %></td>
             <td><%= @record.hole8 %></td>
             <td><%= @record.hole9 %></td>
-            <td><%= @record.hole1 + @record.hole2 + @record.hole3 + @record.hole4 + @record.hole5 + @record.hole6 +
-                    @record.hole7 + @record.hole8 + @record.hole9 %></td>
+            <td>
+              <%= @record.hole1 + @record.hole2 + @record.hole3 + @record.hole4 + @record.hole5 + @record.hole6 +
+                  @record.hole7 + @record.hole8 + @record.hole9 %>
+            </td>
           </tr>
         </tbody>
       </table>
+      <p class="record-show-latter">後半ホール</p>
+      <table class="hole-show table table-hover table-inverse">
+        <thead>
+          <tr>
+            <th>Hole</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>後半</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td><%= @record.hole10 %></td>
+            <td><%= @record.hole11 %></td>
+            <td><%= @record.hole12 %></td>
+            <td><%= @record.hole13 %></td>
+            <td><%= @record.hole14 %></td>
+            <td><%= @record.hole15 %></td>
+            <td><%= @record.hole16 %></td>
+            <td><%= @record.hole17 %></td>
+            <td><%= @record.hole18 %></td>
+            <td>
+              <%= @record.hole10 + @record.hole11 + @record.hole12 + @record.hole13 + @record.hole14 + @record.hole15 +
+                  @record.hole16 + @record.hole17 + @record.hole18 %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="memo-show">ラウンドメモ</p>
+      <div class="round-memo">
+        <%= @record.memo %>
       </div>
       <%= link_to "削除する", record_path(@record), method: :delete, "data-confirm" => "本当に削除しますか？", class: 'btn btn-danger' %>
       <%= link_to "編集する", edit_record_path(@record), class: 'btn btn-success' %>
