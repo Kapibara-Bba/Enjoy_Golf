@@ -2,7 +2,7 @@
   <div class="record-new">
     <h3 class="record-new-title">スコア登録</h3>
   </div>
-  <%= form_with model:@record, method: :post do |f| %>
+  <%= form_with model:@record, method: :post, local: true do |f| %>
     <div class="score">
       <div class="record-form">
         <div class="course-info">
@@ -154,7 +154,7 @@
       </div>
     </div>
     <div class="total-score">
-      
+
     </div>
     <div class="memo-info">
       <%= f.label :ラウンドメモ %>

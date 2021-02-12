@@ -28,7 +28,7 @@ class RecordsController < ApplicationController
     @record = Record.find(params[:id])
     @record.user_id = current_user.id
     @user_record = current_user.records
-    if @record.save
+    if @record.update(record_params)
       redirect_to user_path(current_user)
       flash[:notice] = "記録の変更に成功しました"
     else
