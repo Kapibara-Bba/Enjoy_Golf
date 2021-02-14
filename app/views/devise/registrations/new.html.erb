@@ -27,7 +27,9 @@
       </div>
     <% end %>
     <div class="sign-btn">
-      <%= link_to 'ログイン', new_user_session_path %>
+      <%= link_to new_user_session_path do %>
+        ログイン<i class="fas fa-golf-ball"></i>
+      <% end %>
     </div>
   </div>
 </div>
