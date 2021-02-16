@@ -21,6 +21,7 @@
             <ul>
               <li class="top-header"><%= link_to 'トップページ', root_path %></li>
               <li class="top-header"><%= link_to 'Enjoy_Golfとは？', homes_about_path %></li>
+              <li class="top-header"><%= link_to 'マイページ', user_path(current_user) %></li>
               <li class="top-header"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
             </ul>
           <% else %>

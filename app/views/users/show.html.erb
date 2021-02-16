@@ -16,7 +16,6 @@
             @user_record.all.sum(:hole9) + @user_record.all.sum(:hole10) + @user_record.all.sum(:hole11) + @user_record.all.sum(:hole12) +
             @user_record.all.sum(:hole13) + @user_record.all.sum(:hole14) + @user_record.all.sum(:hole15) + @user_record.all.sum(:hole16) ;
             @user_record.all.sum(:hole17) + @user_record.all.sum(:hole18) %>
-          <%#= @user_record.average().floor(1) %>
         <% end %>
       </p>
     <div class="col-xs-6 user-average-score">
@@ -28,7 +27,6 @@
             @user_record.all.sum(:hole8_putt) + @user_record.all.sum(:hole9_putt) + @user_record.all.sum(:hole10_putt) + @user_record.all.sum(:hole11_putt) +
             @user_record.all.sum(:hole12_putt) + @user_record.all.sum(:hole13_putt) + @user_record.all.sum(:hole14_putt) +
             @user_record.all.sum(:hole15_putt) + @user_record.all.sum(:hole16_putt) + @user_record.all.sum(:hole17_putt) + @user_record.all.sum(:hole18_putt) %>
-          <%#= @user_record.average(:sum_putt) %>
         <% end %>
       </p>
     </div>
