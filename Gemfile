@@ -77,3 +77,9 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'chartkick'
 
 gem 'jp_prefecture'
+
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
+
