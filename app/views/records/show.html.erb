@@ -100,6 +100,30 @@
           </tr>
         </tbody>
       </table>
+      <div class="record-member">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>スコア</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @record.member1 %></td>
+              <td><%= @record.member1_score %></td>
+            </tr>
+            <tr>
+              <td><%= @record.member2 %></td>
+              <td><%= @record.member2_score %></td>
+            </tr>
+            <tr>
+              <td><%= @record.member3 %></td>
+              <td><%= @record.member3_score %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p class="memo-show">ラウンドメモ</p>
       <div class="round-memo">
         <%= @record.memo %>

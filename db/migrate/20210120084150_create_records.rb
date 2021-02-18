@@ -5,7 +5,7 @@ class CreateRecords < ActiveRecord::Migration[5.2]
       t.integer :score
       t.integer :putt
       t.string :course
-      t.string :member
+      t.string :member  
       t.integer :weather
       t.integer :wind
       t.integer :hole1
@@ -46,6 +46,13 @@ class CreateRecords < ActiveRecord::Migration[5.2]
       t.integer :hole18_putt
       t.string :memo
       t.string :prefecture_code
+      t.string :member1
+      t.string :member2
+      t.string :member3
+      t.integer :member1_score
+      t.integer :member2_score
+      t.integer :member3_score
+      
       t.timestamps
     end
   end
