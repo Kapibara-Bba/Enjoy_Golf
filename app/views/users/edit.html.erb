@@ -6,12 +6,18 @@
   </div>
   <div class="user-edit">
     <%= form_with model: @user, url: user_path, method: :patch, local: true do |f| %>
-      <%= f.label :名前 %>
-      <%= f.text_field :name %>
-      <%= attachment_image_tag @user, :image, fallback: 'no_image.jpg', format: 'jpeg', size:'150x150', onChange: "$('.img_field').change()", class: 'center-block img_prev profile-image'%>
-      <%= f.attachment_field :image, class: 'img_field' %>
-      <%= f.submit "変更を保存", class: 'btn btn-success' %>
-      <%= link_to '戻る', user_path(current_user), class: 'btn btn-secondary' %>
+      <div class="form_group">
+        <%= attachment_image_tag @user, :image, fallback: 'no_image.jpg', format: 'jpeg', size:'150x150', onChange: "$('.img_field').change()", class: 'center-block img_prev profile-image'%>
+        <%= f.attachment_field :image, class: 'img_field' %>
+      </div>
+      <div class="form_group">
+        <%= f.label :名前 %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="submit-btn">
+        <%= f.submit "変更を保存", class: 'btn btn-success' %>
+        <%= link_to '戻る', user_path(current_user), class: 'btn btn-secondary' %>
+      </div>
     <% end %>
   </div>
 </div>
